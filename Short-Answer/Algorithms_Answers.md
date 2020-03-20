@@ -6,7 +6,7 @@ a) This code run time will be O(n). This code will keep on running until the whi
 
 b) This code would be O(n^2) because it is a nested loop. AS the n value increases, the time for running this loop will also increase by 2.
 
-c) This code run time will be O(2n) because it is a recursive function. It will keep on running until the recursive function has reached its base value, and then has to add everything up after finding the base value of 0.
+c) This code run time will be O(n) because it is a recursive function. It will keep on running until the recursive function has reached its base value, and then has to retune the base vale of 0
 
 ## Exercise II
 

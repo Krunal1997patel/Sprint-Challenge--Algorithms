@@ -98,8 +98,33 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
+        """
+        1 check if i can move right with a while loop
+        2 move right
+        3 loop thoroug the list with another while loop, which will make it a O(n^2)
+        4 if the value is small, swap it
+        5 if it reach the end of the list, move left of the list
+        6 check the left side of list until if fine NONE
+        7 if find None in left, move right and repet
+        """
+
         while self.can_move_right():
-            self.move_right()
+            self.swap_item()
+
+            while self.can_move_right():
+                self.move_right()
+
+                if self.compare_item() == 1:
+                    self.swap_item()
+
+            if not self.can_move_right():
+                while self.compare_item() != None:
+                    self.move_left()
+
+                    if self.compare_item() == None:
+                        self.swap_item()
+                        self.move_right()
+        return
 
 
 # if __name__ == "__main__":
